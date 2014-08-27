@@ -1,6 +1,4 @@
-package com.visualstudio.kdv;
-
-public class Main {
+public class Percolation {
 
     public static void main(String[] args) {
 	// write your code here
