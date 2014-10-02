@@ -4,12 +4,12 @@ namespace Percolation
 {
     public class Percolation
     {
-        private bool[] sites;
-        private int size;
-        private WeightedQuickUnionUF relations;
-        private WeightedQuickUnionUF toTopSiteRelations;
-        private int topSiteIndex;
-        private int bottomSiteIndex;
+        private readonly bool[] sites;
+        private readonly int size;
+        private readonly WeightedQuickUnionUF relations;
+        private readonly WeightedQuickUnionUF toTopSiteRelations;
+        private readonly int topSiteIndex;
+        private readonly int bottomSiteIndex;
 
         public Percolation( int n )
         {
