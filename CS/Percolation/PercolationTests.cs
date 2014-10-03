@@ -60,6 +60,33 @@ namespace Percolation
             Assert.IsTrue( target.IsFull( 1, 1 ) );
         }
 
+		[TestMethod]
+		[ExpectedException( typeof( ArgumentOutOfRangeException ) )]
+		public void TestThatIsFullThrowsExceptionOnInvalidFirstIndex()
+		{
+			Percolation target = new Percolation( 2 );
+
+			target.IsFull( -1, 1 );
+		}
+
+		[TestMethod]
+		[ExpectedException( typeof( ArgumentOutOfRangeException ) )]
+		public void TestThatIsFullThrowsExceptionOnTooBigSecondIndex()
+		{
+			Percolation target = new Percolation( 2 );
+
+			target.IsFull( 1, 5 );
+		}
+
+		[TestMethod]
+		[ExpectedException( typeof( ArgumentOutOfRangeException ) )]
+		public void TestThatIsFullThrowsExceptionOnTooLowSecondIndex()
+		{
+			Percolation target = new Percolation( 2 );
+
+			target.IsFull( 1, -5 );
+		}
+
         [TestMethod]
         public void TestIsOpenAfterOpen()
         {
